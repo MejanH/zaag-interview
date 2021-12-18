@@ -18,8 +18,10 @@ const Home: React.FC = () => {
             name="name"
             id="name"
             placeholder="Enter Country"
+            type="search"
+            role="search"
           />
-          <Button variant="contained" type="submit">
+          <Button variant="contained" type="submit" role="submit">
             Submit
           </Button>
         </Stack>

@@ -53,13 +53,13 @@ export const CountryDetails: React.FC = () => {
           <Typography variant="h6" my={2} textAlign="center">
             Country Information
           </Typography>
-          <Typography variant="body1" component="p">
+          <Typography variant="body1" component="p" data-testid="capital-info">
             Capital: <strong>{countryData.capital[0]}</strong>
           </Typography>
-          <Typography variant="body1">
+          <Typography variant="body1" data-testid="population-info">
             Population: <strong>{countryData.population}</strong>
           </Typography>
-          <Typography variant="body1">
+          <Typography variant="body1" data-testid="latlng-info">
             latlng: <strong>{JSON.stringify(countryData.latlng)}</strong>
           </Typography>
           <Typography variant="body1">Flag:</Typography>
@@ -70,19 +70,23 @@ export const CountryDetails: React.FC = () => {
                 <Typography variant="h6" my={2} textAlign="center">
                   Weather Information
                 </Typography>
-                <Typography variant="body1" component="p">
+                <Typography
+                  variant="body1"
+                  component="p"
+                  data-testid="temp-info"
+                >
                   Temperature:{" "}
                   <strong>{weatherData.current.temperature}</strong>
                 </Typography>
-                <Typography variant="body1">
+                <Typography variant="body1" data-testid="wind-info">
                   Wind Speed: <strong>{weatherData.current.wind_speed}</strong>
                 </Typography>
-                <Typography variant="body1">
+                <Typography variant="body1" data-testid="precip-info">
                   Precip: <strong>{weatherData.current.precip}</strong>
                 </Typography>
                 <Typography variant="body1">Weather Icons:</Typography>
-                {weatherData.current.weather_icons.map((icon) => (
-                  <img src={icon} alt="weather icon" />
+                {weatherData.current.weather_icons.map((icon, index) => (
+                  <img src={icon} key={index} alt="weather icon" />
                 ))}
               </Box>
             ) : (
