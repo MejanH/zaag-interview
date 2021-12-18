@@ -21,7 +21,7 @@ const Home: React.FC = () => {
             type="search"
             role="search"
           />
-          <Button variant="contained" type="submit" role="submit">
+          <Button variant="contained" type="submit">
             Submit
           </Button>
         </Stack>

@@ -6,5 +6,5 @@ test("Home page should have a search field and submit button", () => {
   renderWithRouter(<Home />);
 
   expect(screen.getByRole("search")).toBeInTheDocument();
-  expect(screen.getByRole("submit")).toBeInTheDocument();
+  expect(screen.getByRole("button")).toBeInTheDocument();
 });
